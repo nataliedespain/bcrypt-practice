@@ -1,5 +1,12 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+	if cookies
+		a(href='/home') Home
+		br
+		a(href='/logout') Logout
+	else
+		a(href='/login') Login
+		br
+		a(href='/users/new') Create account
+

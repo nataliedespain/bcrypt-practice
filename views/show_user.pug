@@ -1,0 +1,11 @@
+extends layout
+
+block content
+	h1= user.username
+	p= user.email
+	p= user.age
+	if user.id == cookies
+		a(href=`/users/${user.id}/edit`) Edit profile
+		br
+		a(href='/logout') Logout
+	

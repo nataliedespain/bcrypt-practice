@@ -1,0 +1,10 @@
+extends layout
+
+block content
+	h1 Hello #{user.username}
+	a(href=`/users/${user.id}`) View profile
+	br
+	a(href=`/users/${user.id}/edit`) Edit profile
+	br
+	a(href='/logout') Logout
+
