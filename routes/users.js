@@ -65,5 +65,12 @@ router.post('/:id', function(req, res, next) {
   }
 });
 
+router.get('/:id/delete', function(req, res, next) {
+	knex('users').where({id: req.params.id}).del()
+		.then(function(user) {
+			res.clearCookie('user_id');
+			res.redirect('/')
+		})
+});
 
 module.exports = router;

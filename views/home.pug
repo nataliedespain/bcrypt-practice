@@ -7,4 +7,8 @@ block content
 	a(href=`/users/${user.id}/edit`) Edit profile
 	br
 	a(href='/logout') Logout
+	br
+	form(method='POST' action=`/users/${user.id}/delete`)
+		button(type='submit')
+			a(href=`/users/${user.id}/delete`) Delete profile
 
